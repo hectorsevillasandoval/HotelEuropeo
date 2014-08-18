@@ -1,0 +1,108 @@
+@import 'normalize.styl'
+@import 'fonts.styl'
+@import 'bxslider.styl'
+@import 'sidebar.styl'
+@import 'nib'
+
+ul
+p
+h1
+h2
+h3
+figure
+	margin 0
+	padding 0
+ul
+	list-style none
+
+[class^="icon-"], [class*=" icon-"]
+	font-family 'icomoon'
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	line-height 1
+	font-smoothing antialiased
+	osx-font-smoothing grayscale
+
+.icon-check
+	&:before
+		content "\e600"
+
+.icon-menu
+	&:before
+		content "\e601"
+
+.icon-usuario
+	&:before
+		content "\e602"
+
+.icon-candado
+	&:before
+		content "\e603"
+
+.icon-calendario
+	&:before
+		content "\e604"
+
+.icon-arroba
+	&:before
+		content "\e605"
+
+.icon-telefono
+	&:before
+		content "\e606"
+.left
+	float left
+.right
+	float right
+
+gris = #333
+dorado = #E2B653
+a
+	&:link
+	&:visited
+		text-decoration none
+		color gris
+
+body
+	font-family 'SansRegular'
+	font-size 16px
+	font-weight normal
+	color gris
+.idiomas
+	padding .8em
+	background-color: red
+	height auto
+	width auto
+	.menu-movil
+		background-color dorado
+		border-radius 5px
+		display inline-block
+		vertical-align middle
+		color white
+		height 1.5em
+		text-align center
+		padding .3em
+		width 1.5em
+		a
+			&:link
+			&:visited
+				color white
+				font-size 1.5em
+	.lenguajes
+		display inline-block
+		vertical-align middle
+		text-align right
+		padding-top 5px
+		ul
+			li
+				display inline-block
+				vertical-align top
+header
+	figure
+		font-size 0
+		text-align center
+		padding 10px 0
+
