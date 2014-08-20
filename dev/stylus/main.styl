@@ -57,9 +57,15 @@ ul
 	float left
 .right
 	float right
+.relativo
+	position relative
+.absoluto
+	position absolute
 
 gris = #333
+gris_claro = #D0D0D0
 dorado = #E2B653
+cafe = #975D3C
 a
 	&:link
 	&:visited
@@ -67,24 +73,32 @@ a
 		color gris
 
 body
+	background-color gris_claro
+	color gris
 	font-family 'SansRegular'
 	font-size 16px
 	font-weight normal
-	color gris
+h1
+	color cafe
+	font-family 'SansBold'
+	font-size 1.1rem
+	margin 10px 0
+	text-align center
+	text-transform uppercase
+
 .idiomas
-	padding .8em
-	background-color: red
 	height auto
+	padding .8em
 	width auto
 	.menu-movil
 		background-color dorado
 		border-radius 5px
-		display inline-block
-		vertical-align middle
 		color white
+		display inline-block
 		height 1.5em
-		text-align center
 		padding .3em
+		text-align center
+		vertical-align middle
 		width 1.5em
 		a
 			&:link
@@ -93,16 +107,85 @@ body
 				font-size 1.5em
 	.lenguajes
 		display inline-block
-		vertical-align middle
-		text-align right
 		padding-top 5px
+		text-align right
+		vertical-align middle
 		ul
 			li
 				display inline-block
+				margin-left 10px
 				vertical-align top
 header
 	figure
 		font-size 0
-		text-align center
 		padding 10px 0
+		text-align center
+.usuario
+	border-bottom 6px solid dorado
+	padding 10px 0
+	text-align center
+	li
+		display inline-block
+		margin 0 8px
+		vertical-align top
+		a
+			&:link
+			&:visited
+				font-size .8em
+			&:hover
+				text-decoration underline
+.sb-slidebar
+	ul
+		text-align center
+		li
+			&:hover
+				background-color: gris
+			&:hover
+				a
+					color white
+			a
+				display block
+				font-size: 1.5em
+				&:link
+				&:visited
+					margin 10px 0
+					padding 10px 0
+section
+	padding 1rem
+	.formulario_reserva
+		.input-text
+			input
+				border 1px solid gris
+				border-radius 5px
+				box-sizing border-box
+				height 2.6rem
+				padding .8em
+				width 100%
+			span
+				font-size 1.5rem
+				top 8px
+				right .5rem
+		.select
+			select
+				border 1px solid gris
+				border-radius 5px
+				padding 0.4em
+				width 50%
+		.boton-principal
+			margin 15px 0
+			input[type="submit"]
+				background-color transparent
+				border-bottom 4px solid dorado
+				border-left 1px solid dorado
+				border-radius 5px
+				border-right 1px solid dorado
+				border-top 1px solid dorado
+				color dorado
+				font-family 'SansBold'
+				padding 8px 0
+				text-transform uppercase
+				width 100%
+				&:hover
+					background-color dorado
+					color white
 

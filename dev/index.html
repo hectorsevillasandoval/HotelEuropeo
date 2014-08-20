@@ -10,10 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="uncss/main.css">
         
-            <!-- SCRIPTS -->
-        <script type="text/javascript" src="js/minificado/all.js"></script>
+         
     
     </head>
     <body>
@@ -43,7 +42,58 @@
 		          <header>
 		          	<figure><a href="/"><img src="img/logotipo.png" alt="Logotipo Hotel Europeo"></a></figure>
 		          </header>
+		          <div class="usuario">
+		          	<ul>
+		          		<li><a href="">Iniciar Sesión</a></li>
+		          		<!--<li><a href="">Cerrar Sesión [h2d_07@hotmail.com]</a></li>-->
+		          		<li><a href="">Cambiar Contraseña</a></li>
+		          	</ul>
+		          </div>
+
+		          <section>
+		          	<h1><span class="icon-check"></span>Comprobar Disponibilidad</h1>
+		          	<div class="formulario_reserva">
+		          		<p>Entrada</p>
+		          		<div class="input-text relativo">
+		          			<input type="text" />
+		          			<span class="icon-calendario absoluto"></span>
+		          		</div>
+		          		<p>Salida</p>
+		          		<div class="input-text relativo">
+		          			<input type="text" />
+		          			<span class="icon-calendario absoluto"></span>
+		          		</div>
+		          		<p>Adultos</p>
+		          		<div class="select">
+		          			<select name="adultos" id="adultos">
+		          				<option value="1">1</option>
+		          				<option value="2">2</option>
+		          				<option value="3">3</option>
+		          			</select>
+		          			
+		          		</div>
+		          		<p>Niños</p>
+		          		<div class="select">
+		          			<select name="ninos" id="ninos">
+		          				<option value="0">0</option>
+		          				<option value="1">1</option>
+		          				<option value="2">2</option>
+		          				<option value="3">3</option>
+		          			</select>
+		          			
+		          		</div>
+						<div class="boton-principal">
+							<input type="submit" value="Comprobar">
+						</div>
+						<div class="aviso">
+							<p>Para mayor seguridad de su información durante el proceso de reservación le recomendamos</p>
+						</div>
+		          	</div><!-- FIN FORMULARIO -->
+
+		          </section>
 		</div>
+		   <!-- SCRIPTS -->
+        <script type="text/javascript" src="js/minificado/all.js"></script>
 		<script src="js/slidebars.js"></script>
     	<script>
 			(function($) {

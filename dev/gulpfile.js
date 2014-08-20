@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 //tareas
 gulp.task('stylus', function () {
 gulp.src('stylus/main.styl')
-		.pipe(stylus({use: [nib()],compress: true}))
+		.pipe(stylus({use: [nib()]}))
 		.pipe(gulp.dest('../public/css'))
 		.pipe(connect.reload());
 	
@@ -56,6 +56,15 @@ gulp.task('watch', function() {
     gulp.watch('js/*.js', ['uglify','concat']);
     gulp.watch('img/*', ['imagemin']);
     gulp.watch('*.html', ['minify']);
+    gulp.watch('../public/css/main.css', ['uncss']);
+});
+gulp.task('uncss', function() {
+    // content
+    return gulp.src('../public/css/main.css')
+        .pipe(uncss({
+            html: ['index.html']
+        }))
+        .pipe(gulp.dest('../public/uncss/'));
 });
 
 gulp.task('connect', function() {
@@ -65,11 +74,4 @@ gulp.task('connect', function() {
     	port: 8800
     });
 });
-gulp.task('default', ['connect','watch'], function(){
-
-	return gulp.src('../public/css/main.css')
-        .pipe(uncss({
-            html: ['index.html']
-        }))
-        .pipe(gulp.dest('../public/css/uncss/'));
-});
+gulp.task('default', ['connect','watch']);

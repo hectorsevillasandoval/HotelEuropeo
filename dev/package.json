@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "gulp": "^3.8.7",
+    "gulp-compressor": "^0.1.0",
     "gulp-concat": "^2.3.4",
     "gulp-connect": "^2.0.6",
     "gulp-html-minifier": "^0.1.5",
