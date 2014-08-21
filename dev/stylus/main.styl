@@ -63,9 +63,26 @@ ul
 	position absolute
 
 gris = #333
-gris_claro = #D0D0D0
+gris_claro = #D9D9D9
 dorado = #E2B653
 cafe = #975D3C
+verde = #6FA625
+
+boton(color)
+	background-color transparent
+	border-bottom 4px solid color
+	border-left 1px solid color
+	border-radius 5px
+	border-right 1px solid color
+	border-top 1px solid color
+	color color
+	font-family 'SansBold'
+	padding 8px 0
+	text-transform uppercase
+	width 100%
+
+
+	
 a
 	&:link
 	&:visited
@@ -154,6 +171,7 @@ section
 	padding 1rem
 	.formulario_reserva
 		.input-text
+			margin-bottom 10px
 			input
 				border 1px solid gris
 				border-radius 5px
@@ -166,6 +184,7 @@ section
 				top 8px
 				right .5rem
 		.select
+			margin-bottom 10px
 			select
 				border 1px solid gris
 				border-radius 5px
@@ -174,18 +193,65 @@ section
 		.boton-principal
 			margin 15px 0
 			input[type="submit"]
-				background-color transparent
-				border-bottom 4px solid dorado
-				border-left 1px solid dorado
-				border-radius 5px
-				border-right 1px solid dorado
-				border-top 1px solid dorado
-				color dorado
-				font-family 'SansBold'
-				padding 8px 0
-				text-transform uppercase
-				width 100%
+				boton(dorado)
 				&:hover
 					background-color dorado
 					color white
-
+		.aviso
+			font-size .8em
+			a
+				&:link
+				&:visited
+					text-transform: uppercase
+					color dorado
+				&:hover
+					text-decoration: underline
+	.habitacion
+		margin-bottom 20px
+		figure
+			font-size 0
+			text-align center
+			img
+				height auto
+				width 100%
+		h2
+			margin-top 10px
+		.precio
+			text-align right
+			color cafe
+			h3
+				text-transform uppercase
+				font-family 'SansBold'
+			p
+				&:nth-child(2)
+					font-family 'SansBold'
+					font-size: 1.2em		
+				&:last-child
+					font-size .8em
+		.boton2
+			margin 15px 0
+			input[type="submit"]
+				boton(verde)
+				&:hover
+					background-color: verde
+					color white
+footer
+	background-color: gris
+	border-top 4px solid dorado
+	padding 0 1em
+	ul
+		padding 15px 0
+		text-align center
+		li
+			display inline-block
+			margin 0 15px
+			a
+				&:link
+				&:visited
+					color white
+				&:hover
+					text-decoration underline
+	figure
+		font-size 0
+		text-align center
+		padding-bottom 12px

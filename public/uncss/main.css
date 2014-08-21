@@ -12,6 +12,7 @@ body {
 
 article,
 figure,
+footer,
 header,
 section {
   display: block;
@@ -28,7 +29,7 @@ a:hover {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 img {
@@ -69,21 +70,21 @@ input {
   font-family: 'icomoon';
   font-weight: normal;
   src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'),url("../fonts/icomoon.woff") format('woff'),url("../fonts/icomoon.ttf") format('truetype'),url("../fonts/icomoon.svg#icomoon") format('svg');
+  src: url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'), url("../fonts/icomoon.woff") format('woff'), url("../fonts/icomoon.ttf") format('truetype'), url("../fonts/icomoon.svg#icomoon") format('svg');
 }
 
 @font-face {
   font-family: 'SansBold';
   font-weight: normal;
   src: url("../fonts/opensans-bold-webfont.eot");
-  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format('embedded-opentype'),url("../fonts/opensans-bold-webfont.woff") format('woff'),url("../fonts/opensans-bold-webfont.ttf") format('truetype'),url("../fonts/opensans-bold-webfont.svg#SansBold") format('svg');
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/opensans-bold-webfont.woff") format('woff'), url("../fonts/opensans-bold-webfont.ttf") format('truetype'), url("../fonts/opensans-bold-webfont.svg#SansBold") format('svg');
 }
 
 @font-face {
   font-family: 'SansRegular';
   font-weight: normal;
   src: url("../fonts/opensans-regular-webfont.eot");
-  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format('embedded-opentype'),url("../fonts/opensans-regular-webfont.woff") format('woff'),url("../fonts/opensans-regular-webfont.ttf") format('truetype'),url("../fonts/opensans-regular-webfont.svg#SansRegular") format('svg');
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/opensans-regular-webfont.woff") format('woff'), url("../fonts/opensans-regular-webfont.ttf") format('truetype'), url("../fonts/opensans-regular-webfont.svg#SansRegular") format('svg');
 }
 
 html,
@@ -128,7 +129,7 @@ body {
   z-index: 0;
   display: none;
   background-color: #e2b653;
-  -webkit-transform: translate(0);
+  -webkit-transform: translate(0px);
   width: 30%;
 }
 
@@ -142,35 +143,35 @@ body {
   transition: -moz-transform 400ms ease;
   transition: -o-transform 400ms ease;
   transition: transform 400ms ease;
-  transition-property: -webkit-transform,left,right;
+  transition-property: -webkit-transform, left, right;
   backface-visibility: hidden;
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .sb-slidebar {
     width: 70%;
   }
 }
 
-@media (min-width:481px) {
+@media (min-width: 481px) {
   .sb-slidebar {
     width: 55%;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .sb-slidebar {
     width: 40%;
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .sb-slidebar {
     width: 30%;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .sb-slidebar {
     width: 20%;
   }
@@ -179,6 +180,8 @@ body {
 ul,
 p,
 h1,
+h2,
+h3,
 figure {
   margin: 0;
   padding: 0;
@@ -231,7 +234,7 @@ a:visited {
 }
 
 body {
-  background-color: #d0d0d0;
+  background-color: #d9d9d9;
   color: #333;
   font-family: 'SansRegular';
   font-size: 16px;
@@ -249,7 +252,7 @@ h1 {
 
 .idiomas {
   height: auto;
-  padding: .8em;
+  padding: 0.8em;
   width: auto;
 }
 
@@ -260,7 +263,7 @@ h1 {
   color: #fff;
   display: inline-block;
   height: 1.5em;
-  padding: .3em;
+  padding: 0.3em;
   text-align: center;
   vertical-align: middle;
   width: 1.5em;
@@ -305,7 +308,7 @@ header figure {
 
 .usuario li a:link,
 .usuario li a:visited {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .usuario li a:hover {
@@ -339,6 +342,10 @@ section {
   padding: 1rem;
 }
 
+section .formulario_reserva .input-text {
+  margin-bottom: 10px;
+}
+
 section .formulario_reserva .input-text input {
   border: 1px solid #333;
   -webkit-border-radius: 5px;
@@ -347,21 +354,25 @@ section .formulario_reserva .input-text input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 2.6rem;
-  padding: .8em;
+  padding: 0.8em;
   width: 100%;
 }
 
 section .formulario_reserva .input-text span {
   font-size: 1.5rem;
   top: 8px;
-  right: .5rem;
+  right: 0.5rem;
+}
+
+section .formulario_reserva .select {
+  margin-bottom: 10px;
 }
 
 section .formulario_reserva .select select {
   border: 1px solid #333;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  padding: .4em;
+  padding: 0.4em;
   width: 50%;
 }
 
@@ -387,4 +398,110 @@ section .formulario_reserva .boton-principal input[type="submit"] {
 section .formulario_reserva .boton-principal input[type="submit"]:hover {
   background-color: #e2b653;
   color: #fff;
+}
+
+section .formulario_reserva .aviso {
+  font-size: 0.8em;
+}
+
+section .formulario_reserva .aviso a:link,
+section .formulario_reserva .aviso a:visited {
+  text-transform: uppercase;
+  color: #e2b653;
+}
+
+section .formulario_reserva .aviso a:hover {
+  text-decoration: underline;
+}
+
+section .habitacion {
+  margin-bottom: 20px;
+}
+
+section .habitacion figure {
+  font-size: 0;
+  text-align: center;
+}
+
+section .habitacion figure img {
+  height: auto;
+  width: 100%;
+}
+
+section .habitacion h2 {
+  margin-top: 10px;
+}
+
+section .habitacion .precio {
+  text-align: right;
+  color: #975d3c;
+}
+
+section .habitacion .precio h3 {
+  text-transform: uppercase;
+  font-family: 'SansBold';
+}
+
+section .habitacion .precio p:nth-child(2) {
+  font-family: 'SansBold';
+  font-size: 1.2em;
+}
+
+section .habitacion .precio p:last-child {
+  font-size: 0.8em;
+}
+
+section .habitacion .boton2 {
+  margin: 15px 0;
+}
+
+section .habitacion .boton2 input[type="submit"] {
+  background-color: transparent;
+  border-bottom: 4px solid #6fa625;
+  border-left: 1px solid #6fa625;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-right: 1px solid #6fa625;
+  border-top: 1px solid #6fa625;
+  color: #6fa625;
+  font-family: 'SansBold';
+  padding: 8px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+section .habitacion .boton2 input[type="submit"]:hover {
+  background-color: #6fa625;
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  border-top: 4px solid #e2b653;
+  padding: 0 1em;
+}
+
+footer ul {
+  padding: 15px 0;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+footer ul li a:link,
+footer ul li a:visited {
+  color: #fff;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer figure {
+  font-size: 0;
+  text-align: center;
+  padding-bottom: 12px;
 }

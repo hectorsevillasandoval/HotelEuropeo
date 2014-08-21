@@ -8,7 +8,8 @@ var gulp = require('gulp'),
  	uncss = require('gulp-uncss'),
  	connect = require('gulp-connect'),
  	htmlmin = require('gulp-html-minifier'),
- 	imagemin = require('gulp-imagemin');
+ 	imagemin = require('gulp-imagemin'),
+    compressor = require('gulp-compressor');
 
 
 //tareas
@@ -60,10 +61,9 @@ gulp.task('watch', function() {
 });
 gulp.task('uncss', function() {
     // content
-    return gulp.src('../public/css/main.css')
-        .pipe(uncss({
-            html: ['index.html']
-        }))
+    gulp.src('../public/css/main.css')
+        .pipe(uncss({html: ['index.html']}))
+        /*.pipe(compressor())*/
         .pipe(gulp.dest('../public/uncss/'));
 });
 
@@ -71,7 +71,8 @@ gulp.task('connect', function() {
     // content
     connect.server({
     	root: '../public/',
-    	port: 8800
+    	port: 8800,
+        livereload: true
     });
 });
 gulp.task('default', ['connect','watch']);
