@@ -27,7 +27,7 @@
 		</div>
     	<div id="sb-site">
   <!-- Your main site content. -->
-		  <article class="idiomas">
+		  <article class="idiomas small medium">
 		    		<div class="menu-movil">
 		    			<a href="#" class="icon-menu sb-toggle-left"></a>
 		    		</div>
@@ -38,21 +38,40 @@
 		    				<li><img src="img/fr.gif" height="14" width="20" alt=""></li>
 		    			</ul>
 		    		</div>
-		    	</article>
+		    </article><!-- FIN BARRA IDIOMAS -->
 		          <header>
 		          	<figure><a href="/"><img src="img/logotipo.png" alt="Logotipo Hotel Europeo"></a></figure>
 		          </header>
-		          <div class="usuario">
+		          <div class="usuario medium">
 		          	<ul>
 		          		<li><a href="">Iniciar Sesión</a></li>
 		          		<!--<li><a href="">Cerrar Sesión [h2d_07@hotmail.com]</a></li>-->
 		          		<li><a href="">Cambiar Contraseña</a></li>
 		          	</ul>
 		          </div>
+		          <div class="menu-principal small medium">
+			          <nav>
+			          	<ul>
+			          		<li><a href="">Inicio</a></li>
+			          		<li><a href="">Restaurante</a></li>
+			          		<li><a href="">Auditorio</a></li>
+			          		<li><a href="">Paquetes</a></li>
+			          	</ul>
+			          </nav>
+		          	
+		          </div><!-- FIN MENU HORIZONTAL -->
+				  
+				  <div class="slider small medium">
+				  	<img src="img/slider-1.jpg" height="403" width="1280" alt="">
+				  	<img src="img/slider-2.jpg" height="403" width="1280" alt="">
+				  	<img src="img/slider-3.jpg" height="403" width="1280" alt="">
+				  	
+				  </div>
 
-		          <section>
+
+		          <section class="large">
 		          	<h1><span class="icon-check"></span>Comprobar Disponibilidad</h1>
-		          	<div class="formulario_reserva">
+		          	<div class="formulario_reserva medium large">
 		          		<p>Entrada</p>
 		          		<div class="input-text relativo">
 		          			<input type="text" />
@@ -91,10 +110,11 @@
 						</div>
 		          	</div><!-- FIN FORMULARIO -->
 					
-					<article class="habitaciones">
+					<article class="habitaciones medium large">
 						<h1>Habitaciones Disponibles</h1>
-						<div class="habitacion">
+						<div class="habitacion ">
 							<figure><img src="img/sencilla2.jpg" height="300" width="400" alt="Habitacion sencilla hotel europeo"></figure>
+							<div class="wrap">
 							<h2>Sencilla</h2>
 							<div class="detalles">
 								<ol>
@@ -117,14 +137,17 @@
 									<p>+17% (IVA e INTUR)</p>
 									
 								</div>
+
 								<div class="boton2">
 									<input type="submit" value="Reservar">
+								</div>
 								</div>
 								
 							</div>
 						</div>
 						<div class="habitacion">
 							<figure><img src="img/doble.jpg" height="300" width="400" alt="Habitacion sencilla hotel europeo"></figure>
+							<div class="wrap">
 							<h2>Sencilla</h2>
 							<div class="detalles">
 								<ol>
@@ -147,13 +170,16 @@
 									<p>+17% (IVA e INTUR)</p>
 									
 								</div>
+
 								<div class="boton2">
 									<input type="submit" value="Reservar">
+								</div>
 								</div>
 							</div>
 						</div><!-- FIN CAJA 2 -->
 						<div class="habitacion">
 							<figure><img src="img/triple.jpg" height="300" width="400" alt="Habitacion sencilla hotel europeo"></figure>
+							<div class="wrap">
 							<h2>Sencilla</h2>
 							<div class="detalles">
 								<ol>
@@ -176,14 +202,16 @@
 									<p>+17% (IVA e INTUR)</p>
 									
 								</div>
+
 								<div class="boton2">
 									<input type="submit" value="Reservar">
+								</div>
 								</div>
 							</div>
 						</div><!-- FIN CAJA 3 -->
 					</article>
 		          </section>
-		          <footer>
+		          <footer class="large">
 		          	<div class="menu">
 		          		<ul>
 		          			<li><a href="">Inicio</a></li>
@@ -191,9 +219,11 @@
 		          			<li><a href="">Paquetes</a></li>
 		          		</ul>
 		          	</div>
+		          	<div class="wrap">
 		          	<figure><img src="img/alfaico.png" height="55" width="60" alt="Alfa en linea"></figure>
 		          	<figure><img src="img/ssl.gif" height="32" width="131" alt="SSL"></figure>
 		          	<figure><img src="img/tarjetas.png" height="18" width="150" alt="Visa, MasterCard"></figure>
+		          	</div>
 		          </footer>
 		</div>
 		   <!-- SCRIPTS -->
@@ -203,6 +233,11 @@
 			(function($) {
 				$(document).ready(function() {
 					$.slidebars();
+					$(".slider").bxSlider({
+						auto: true,
+						autoControls: false,
+						pager: false
+					});
 				});
 			}) (jQuery);
 		</script>

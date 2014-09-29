@@ -14,6 +14,7 @@ article,
 figure,
 footer,
 header,
+nav,
 section {
   display: block;
 }
@@ -118,7 +119,6 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
-  background-color: #fff;
 }
 
 .sb-slidebar {
@@ -235,6 +235,9 @@ a:visited {
 
 body {
   background-color: #d9d9d9;
+  background-image: url("../img/fondo.jpg");
+  background-position: center 0;
+  background-repeat: repeat-x;
   color: #333;
   font-family: 'SansRegular';
   font-size: 16px;
@@ -252,6 +255,7 @@ h1 {
 
 .idiomas {
   height: auto;
+  overflow: hidden;
   padding: 0.8em;
   width: auto;
 }
@@ -338,7 +342,40 @@ header figure {
   padding: 10px 0;
 }
 
+.menu-principal nav {
+  background-color: #e2b653;
+  text-align: center;
+}
+
+.menu-principal nav ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.menu-principal nav ul li a {
+  display: block;
+  padding: 5px 15px;
+}
+
+.menu-principal nav ul li a:link,
+.menu-principal nav ul li a:visited {
+  font-size: 1.5rem;
+}
+
+.menu-principal nav ul li:hover {
+  background-color: #333;
+}
+
+.menu-principal nav ul li:hover a {
+  color: #fff;
+}
+
 section {
+  background-color: #fff;
+  background-image: url("../img/fondo-seccion.jpg");
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
   padding: 1rem;
 }
 
@@ -504,4 +541,137 @@ footer figure {
   font-size: 0;
   text-align: center;
   padding-bottom: 12px;
+}
+
+@media screen and (min-width: 240px) {
+  .menu-principal.small {
+    display: none;
+  }
+
+  .slider.small {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .idiomas.medium .menu-movil {
+    display: none;
+  }
+
+  .menu-principal.medium {
+    display: block;
+  }
+
+  .usuario.medium {
+    border-bottom: 0;
+    padding: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .slider.medium {
+    display: block;
+  }
+
+  .formulario_reserva.medium {
+    margin: 0 auto;
+    max-width: 35em;
+  }
+
+  .habitaciones.medium .habitacion {
+    overflow: hidden;
+  }
+
+  .habitaciones.medium .habitacion figure,
+  .habitaciones.medium .habitacion .wrap {
+    display: inline-block;
+    max-width: 49%;
+    vertical-align: top;
+  }
+
+  .habitaciones.medium .habitacion figure {
+    float: left;
+  }
+
+  .habitaciones.medium .habitacion .wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 1.5em;
+    float: right;
+  }
+
+  .habitaciones.medium .habitacion .wrap h2 {
+    margin-top: 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+  }
+
+  .habitaciones.medium .habitacion .wrap .detalles {
+    font-size: 0.8em;
+  }
+
+  .habitaciones.medium .habitacion .wrap .detalles ol {
+    margin: 5px 0;
+    height: 10rem;
+    overflow-y: scroll;
+  }
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer figure:nth-child(1),
+  footer figure:nth-child(2) {
+    float: left;
+  }
+
+  footer figure:nth-child(2) {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  footer figure:nth-child(3) {
+    float: right;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  section.large {
+    border: 1px solid #bebebe;
+    margin: 1.5em auto;
+    overflow: hidden;
+    width: 62.5rem;
+  }
+
+  section.large h1 {
+    text-align: left;
+    margin: 1.5em 0;
+  }
+
+  .formulario_reserva.large {
+    max-width: 15em;
+    margin: 0;
+    float: left;
+  }
+
+  .habitaciones.large {
+    float: right;
+    max-width: 68%;
+  }
+
+  .habitaciones.large h1 {
+    margin: 0.8em 0;
+    text-align: center;
+  }
+
+  .habitaciones.large .habitacion .wrap .detalles ol {
+    height: 7rem;
+  }
+
+  footer.large .wrap {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 62.5rem;
+  }
 }

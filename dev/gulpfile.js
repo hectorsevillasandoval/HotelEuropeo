@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 //tareas
 gulp.task('stylus', function () {
 gulp.src('stylus/main.styl')
-		.pipe(stylus({use: [nib()]}))
+		.pipe(stylus({use: [nib()], compress:true}))
 		.pipe(gulp.dest('../public/css'))
 		.pipe(connect.reload());
 	
